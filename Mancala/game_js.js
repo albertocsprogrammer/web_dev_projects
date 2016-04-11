@@ -107,3 +107,30 @@ function utility(state){
 
 
 }
+function projectBoard(aState, selectedBin) {
+	//given a board state return the next state using the selected bin index.
+var currentBoard = aState.slice();
+var endingBin = selectedBin + currentBoard[selectedBin];
+currentBoard[selectedBin] = 0;
+
+for( var i = selectedBin + 1; i <= endingBin;i++){
+	if( selectedBin <= 6 && selectedBin > 0 && (i%14) == 0){ //skip opponent's bin
+	endingBin++;
+	continue;
+	} else if( selectedBin >= 8 && selectedBin <= 13 && (i%14) == 7) {
+	endingBin++;
+	continue;
+	} else {
+	currentBoard[i%14]++;
+	}
+}
+
+return currentBoard;
+} //end projectBoard
+function printBoard(aState) { //for debug purposes
+var msg = "";
+for(var i = 0; i < aState.length;i++) {
+msg += aState[i] + ",";
+}
+console.log(msg);
+}

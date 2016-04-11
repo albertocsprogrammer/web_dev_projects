@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mancala Game</title>
+<meta charset="UTF-8">
+<script src="game_js.js"></script>
+<link rel="stylesheet" type="text/css" href="game_css.css">
+</head>
+<body>
+<h2>Mancala</h2>
+<table>
+  <tr>
+    <th id="0" rowspan="2">0</th>
+	<td id="13">4</td>
+	<td id="12">4</td>
+	<td id="11">4</td>
+	<td id="10">4</td>
+	<td id="9">4</td>
+    <td id="8">4</td> 
+    <th id="7" rowspan="2">0</th>
+  </tr>
+  <tr>
+   <td id="1">4</td>
+    <td id="2">4</td>
+    <td id="3">4</td>
+    <td id="4">4</td>
+    <td id="5">4</td>
+    <td id="6">4</td>
+     
+  </tr>
+</table>
+<form>
+  Enter a bin #:
+  <input id="label" type="text" name="bin_select">
+   <button type="button" onclick="is_Valid()">Update</button> 
+   <button type="button" onclick="clear_board()">Clear</button> 
+</form>
+</body>
+</html>

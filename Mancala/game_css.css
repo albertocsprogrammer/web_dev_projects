@@ -1,0 +1,17 @@
+table, th, td {
+    border: 5px solid black;
+	border-style: groove;
+	border-color: #dfbf9f;
+	background-color: #cc9966;
+	border-radius: 25px;
+	
+}
+th, td {
+    padding: 10px;
+	height: 50px;
+	color: white;
+    text-align: center;	
+}
+table{
+width: 70%;
+}
